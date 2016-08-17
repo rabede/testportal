@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Vaadin-Widgetsets: ges.portal.MyAppWidgetset
-Vaadin-Package-Version: 1
-Built-By: bell
-Build-Jdk: 1.8.0_101
-Created-By: Maven Integration for Eclipse
-

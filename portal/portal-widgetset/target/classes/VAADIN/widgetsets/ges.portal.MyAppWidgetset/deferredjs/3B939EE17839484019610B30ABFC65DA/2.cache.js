@@ -1,1 +1,0 @@
-$wnd.ges_portal_MyAppWidgetset.runAsyncCallback2('a_b(1711,1,rch);_.yfb=function _4d(){this.zfb(this.b)};_.zfb=function a5d(a){this.Afb(a)};_.Afb=function b5d(a){};_.Hf=function d5d(){this.yfb();LYg.sEd().W6(this.a.Oc())};AXg(Fs)(2);\n//# sourceURL=ges.portal.MyAppWidgetset-2.js\n')
