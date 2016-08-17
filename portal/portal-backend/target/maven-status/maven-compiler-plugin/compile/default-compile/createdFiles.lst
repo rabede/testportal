@@ -1,0 +1,6 @@
+ges/portal/samples/backend/mock/MockDataService.class
+ges/portal/samples/backend/data/Availability.class
+ges/portal/samples/backend/data/Product.class
+ges/portal/samples/backend/data/Category.class
+ges/portal/samples/backend/mock/MockDataGenerator.class
+ges/portal/samples/backend/DataService.class
