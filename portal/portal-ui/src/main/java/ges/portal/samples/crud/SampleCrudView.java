@@ -33,7 +33,7 @@ import com.vaadin.ui.themes.ValoTheme;
  */
 public class SampleCrudView extends CssLayout implements View {
 
-    public static final String VIEW_NAME = "Inventory";
+    public static final String VIEW_NAME = "Bescheide";
     private ProductGrid grid;
     private ProductForm form;
 

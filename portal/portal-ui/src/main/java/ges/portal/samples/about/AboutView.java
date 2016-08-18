@@ -12,27 +12,28 @@ import com.vaadin.ui.VerticalLayout;
 
 public class AboutView extends VerticalLayout implements View {
 
-    public static final String VIEW_NAME = "About";
+	public static final String VIEW_NAME = "Info";
 
-    public AboutView() {
-        CustomLayout aboutContent = new CustomLayout("aboutview");
-        aboutContent.setStyleName("about-content");
+	public AboutView() {
+		CustomLayout aboutContent = new CustomLayout("aboutview");
+		aboutContent.setStyleName("about-content");
 
-        // you can add Vaadin components in predefined slots in the custom
-        // layout
-        aboutContent.addComponent(
-                new Label(FontAwesome.INFO_CIRCLE.getHtml()
-                        + " This application is using Vaadin "
-                        + Version.getFullVersion(), ContentMode.HTML), "info");
+		// you can add Vaadin components in predefined slots in the custom
+		// layout
+		aboutContent.addComponent(new Label(
+				FontAwesome.INFO_CIRCLE.getHtml() + " Diese Demo wurde erstellt mit Vaadin Version "
+						+ Version.getFullVersion()
+						+ " von <a target=\"_blank\" href=\"http://www.ges-systemhaus.de\">GES Systemhaus GmbH & Co. KG</a> ",
+				ContentMode.HTML), "info");
 
-        setSizeFull();
-        setStyleName("about-view");
-        addComponent(aboutContent);
-        setComponentAlignment(aboutContent, Alignment.MIDDLE_CENTER);
-    }
+		setSizeFull();
+		setStyleName("about-view");
+		addComponent(aboutContent);
+		setComponentAlignment(aboutContent, Alignment.MIDDLE_CENTER);
+	}
 
-    @Override
-    public void enter(ViewChangeEvent event) {
-    }
+	@Override
+	public void enter(ViewChangeEvent event) {
+	}
 
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>ges</groupId>
@@ -9,7 +10,7 @@
 	<name>portal-parent</name>
 
 	<properties>
-		<vaadin.version>7.6.8</vaadin.version>
+		<vaadin.version>7.7.0.rc1</vaadin.version>
 		<vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
 		<jetty.plugin.version>9.2.3.v20140905</jetty.plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -98,27 +99,30 @@
 			<!-- Vaadin pre-release repositories -->
 			<id>vaadin-prerelease</id>
 			<activation>
-				<activeByDefault>false</activeByDefault>
+				<activeByDefault>true</activeByDefault>
 			</activation>
-			
+
 			<repositories>
 				<repository>
 					<id>vaadin-prereleases</id>
-					<url>http://maven.vaadin.com/vaadin-prereleases</url>
+					<name>Vaadin Pre-releases</name>
+					<url>https://maven.vaadin.com/vaadin-prereleases</url>
 				</repository>
 			</repositories>
+
 			<pluginRepositories>
 				<pluginRepository>
 					<id>vaadin-prereleases</id>
-					<url>http://maven.vaadin.com/vaadin-prereleases</url>
+					<name>Vaadin Pre-releases</name>
+					<url>https://maven.vaadin.com/vaadin-prereleases</url>
 				</pluginRepository>
 			</pluginRepositories>
 		</profile>
 	</profiles>
-  <modules>
-    <module>portal-widgetset</module>
-    <module>portal-backend</module>
-    <module>portal-ui</module>
-    <module>portal-production</module>
-  </modules>
+	<modules>
+		<module>portal-widgetset</module>
+		<module>portal-backend</module>
+		<module>portal-ui</module>
+		<module>portal-production</module>
+	</modules>
 </project>

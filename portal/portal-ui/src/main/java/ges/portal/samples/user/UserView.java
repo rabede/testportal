@@ -10,6 +10,7 @@ import com.vaadin.ui.CustomLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.TextField;
+import com.vaadin.ui.*;
 
 import ges.portal.samples.authentication.CurrentUser;
 
@@ -19,9 +20,31 @@ public class UserView extends VerticalLayout implements View {
 
 	public UserView() {
 
-		setSizeFull();
-		setStyleName("about-view");
-		addComponent(new TextField("Benutzer", CurrentUser.get()));
+		FormLayout userForm = new FormLayout();
+		userForm.addStyleName("outlined");
+		userForm.setSizeFull();
+		userForm.setMargin(true);
+		userForm.setSpacing(true);
+
+		Label title = new Label("Benutzereinstellungen");
+		userForm.addComponent(title);
+
+		TextField tfUser = new TextField("Benutzername", CurrentUser.get());
+		tfUser.setIcon(FontAwesome.USER);
+		tfUser.setRequired(true);
+		userForm.addComponent(tfUser);
+
+		TextField tfMail = new TextField("E-Mail");
+		tfMail.setIcon(FontAwesome.ENVELOPE);
+		tfMail.setRequired(true);
+		userForm.addComponent(tfMail);
+
+		TextField tfPassword = new TextField("Passwort");
+		tfPassword.setIcon(FontAwesome.KEY);
+		tfPassword.setRequired(true);
+		userForm.addComponent(tfPassword);
+
+		addComponent(userForm);
 	}
 
 	@Override
