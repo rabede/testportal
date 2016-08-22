@@ -69,7 +69,7 @@ public class LoginScreen extends CssLayout {
         username.setWidth(15, Unit.EM);
         loginForm.addComponent(password = new PasswordField("Passwort"));
         password.setWidth(15, Unit.EM);
-        password.setDescription("Irgendwas");
+        password.setDescription("Bitte Passwort eingeben");
         CssLayout buttons = new CssLayout();
         buttons.setStyleName("buttons");
         loginForm.addComponent(buttons);
@@ -93,7 +93,7 @@ public class LoginScreen extends CssLayout {
         forgotPassword.addClickListener(new Button.ClickListener() {
             @Override
             public void buttonClick(Button.ClickEvent event) {
-                showNotification(new Notification("Geben Sie irgendwas ein"));
+                showNotification(new Notification("test"));
             }
         });
         forgotPassword.addStyleName(ValoTheme.BUTTON_LINK);
@@ -105,7 +105,7 @@ public class LoginScreen extends CssLayout {
         loginInformation.setStyleName("login-information");
         Label loginInfoText = new Label(
                 "<h1>Login Information</h1>"
-                        + "Log in as &quot;admin&quot; to have full access. Log in with any other username to have read-only access. For all users, any password is fine",
+                        + "Abfrage über WebService aus D28",
                 ContentMode.HTML);
         loginInformation.addComponent(loginInfoText);
         return loginInformation;
@@ -115,8 +115,8 @@ public class LoginScreen extends CssLayout {
         if (accessControl.signIn(username.getValue(), password.getValue())) {
             loginListener.loginSuccessful();
         } else {
-            showNotification(new Notification("Login failed",
-                    "Please check your username and password and try again.",
+            showNotification(new Notification("Fehlerhafter Login",
+                    "Bitte prüfen Sie Benutzername und Passwort.",
                     Notification.Type.HUMANIZED_MESSAGE));
             username.focus();
         }

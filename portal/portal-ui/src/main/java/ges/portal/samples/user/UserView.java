@@ -16,7 +16,7 @@ import ges.portal.samples.authentication.CurrentUser;
 
 public class UserView extends VerticalLayout implements View {
 
-	public static final String VIEW_NAME = "Benutzer";
+	public static final String VIEW_NAME = "Ihre Daten";
 
 	public UserView() {
 

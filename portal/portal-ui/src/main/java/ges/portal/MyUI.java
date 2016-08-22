@@ -4,7 +4,7 @@ import javax.servlet.annotation.WebServlet;
 
 import ges.portal.samples.MainScreen;
 import ges.portal.samples.authentication.AccessControl;
-import ges.portal.samples.authentication.BasicAccessControl;
+import ges.portal.samples.authentication.SoapAccessControl;
 import ges.portal.samples.authentication.LoginScreen;
 import ges.portal.samples.authentication.LoginScreen.LoginListener;
 
@@ -31,13 +31,13 @@ import com.vaadin.ui.themes.ValoTheme;
 @Widgetset("ges.portal.MyAppWidgetset")
 public class MyUI extends UI {
 
-    private AccessControl accessControl = new BasicAccessControl();
+    private AccessControl accessControl = new SoapAccessControl();
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {
         Responsive.makeResponsive(this);
         setLocale(vaadinRequest.getLocale());
-        getPage().setTitle("My");
+        getPage().setTitle("Bescheidportal");
         if (!accessControl.isUserSignedIn()) {
             setContent(new LoginScreen(accessControl, new LoginListener() {
                 @Override
